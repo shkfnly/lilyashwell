@@ -3717,9 +3717,7 @@
       astrology.utils.removeChilds(wrapper);
     } else {
       wrapper = document.createElementNS(
-        document.getElementById(
-          this.isStatic ? astrology.ID_CHART_STATIC : astrology.ID_CHART
-        ).namespaceURI,
+        document.getElementById(astrology.ID_CHART).namespaceURI,
         "g"
       );
       wrapper.setAttribute("id", elementID);
