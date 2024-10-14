@@ -50,53 +50,6 @@ function modifyStyleForImg() {
     }`;
 }
 
-function makeHandler(autoc) {
-  return function () {
-    const place = autoc.getPlace();
-    console.log(place);
-
-    let address = "";
-    for (let i = 0; i < place.address_components.length; i++) {
-      let addressType = place.address_components[i].types[0];
-      if (addressType == "administrative_area_level_1") {
-        const result = place.address_components[i].long_name;
-        // window.state = result;
-        STATIC_FORM_DATA.state = result;
-      }
-      if (addressType == "country") {
-        const result = place.address_components[i].long_name;
-        // window.country = result;
-        STATIC_FORM_DATA.country = result;
-      }
-      if (addressType == "locality") {
-        const result = place.address_components[i].long_name;
-        // window.locality = result;
-        STATIC_FORM_DATA.locality = result;
-      }
-    }
-
-    // window.lat = place.geometry.location.lat();
-    // window.long = place.geometry.location.lng();
-    STATIC_FORM_DATA.lat = place.geometry.location.lat();
-    STATIC_FORM_DATA.long = place.geometry.location.lng();
-
-    if (place.address_components) {
-      address = [
-        (place.address_components[0] &&
-          place.address_components[0].short_name) ||
-          "",
-        (place.address_components[1] &&
-          place.address_components[1].short_name) ||
-          "",
-        (place.address_components[2] &&
-          place.address_components[2].short_name) ||
-          "",
-      ].join(" ");
-    }
-    STATIC_FORM_DATA.address = address;
-  };
-}
-
 /**
  * Update form input.
  *
