@@ -2142,9 +2142,7 @@
     this.universe = document.createElementNS(this.paper.root.namespaceURI, "g");
     this.universe.setAttribute(
       "id",
-      isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART + "-" + astrology.ID_RADIX
+      astrology.ID_CHART + "-" + astrology.ID_RADIX
     );
     this.paper.root.appendChild(this.universe);
 
