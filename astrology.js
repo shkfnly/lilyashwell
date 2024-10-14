@@ -1942,8 +1942,7 @@
       this.cx,
       this.cy,
       this.radius,
-      data,
-      this.isStatic
+      data
     );
 
     radix.drawBg();
@@ -2099,7 +2098,7 @@
    * @param {int} radius
    * @param {Object} data
    */
-  astrology.Radix = function (paper, cx, cy, radius, data, isStatic) {
+  astrology.Radix = function (paper, cx, cy, radius, data) {
     // Validate data
     var status = astrology.utils.validate(data);
     if (status.hasError) {
@@ -2111,7 +2110,6 @@
     this.cx = cx;
     this.cy = cy;
     this.radius = radius;
-    this.isStatic = isStatic;
     // after calling this.drawPoints() it contains current position of point
     this.locatedPoints = [];
     this.rulerRadius =
