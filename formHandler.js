@@ -1339,7 +1339,7 @@ function createChart() {
               chartSize,
               chartSize,
               settings,
-              isStatic
+              true
             );
 
             radixStatic.radix(data, false, true);
