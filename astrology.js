@@ -2160,9 +2160,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART + "-" + astrology.ID_BG
+      astrology.ID_CHART + "-" + astrology.ID_BG
     );
 
     var LARGE_ARC_FLAG = 1;
@@ -2189,13 +2187,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_SIGNS
+      astrology.ID_CHART + "-" + astrology.ID_RADIX + "-" + astrology.ID_SIGNS
     );
 
     //var zodiac_data = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn ', 'Aquarius ', 'Pisces'];
@@ -2357,13 +2349,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_POINTS
+      astrology.ID_CHART + "-" + astrology.ID_RADIX + "-" + astrology.ID_POINTS
     );
 
     var gap =
@@ -2654,15 +2640,13 @@
 
       symbol.setAttribute(
         "id",
-        this.isStatic
-          ? astrology.ID_CHART_STATIC
-          : astrology.ID_CHART +
-              "-" +
-              astrology.ID_RADIX +
-              "-" +
-              astrology.ID_POINTS +
-              "-" +
-              point.name
+        astrology.ID_CHART +
+          "-" +
+          astrology.ID_RADIX +
+          "-" +
+          astrology.ID_POINTS +
+          "-" +
+          point.name
       );
       symbol.setAttribute("class", "planets");
       symbol.setAttribute("data", point.name);
@@ -2678,13 +2662,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_AXIS
+      astrology.ID_CHART + "-" + astrology.ID_RADIX + "-" + astrology.ID_AXIS
     );
 
     var axisRadius =
@@ -2857,13 +2835,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_CUSPS
+      astrology.ID_CHART + "-" + astrology.ID_RADIX + "-" + astrology.ID_CUSPS
     );
 
     var numbersRadius = this.radius / astrology.RULER_RADIUS;
@@ -3011,13 +2983,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_ASPECTS
+      astrology.ID_CHART + "-" + astrology.ID_RADIX + "-" + astrology.ID_ASPECTS
     );
     wrapper.setAttribute("fill", "red");
 
@@ -3219,14 +3185,12 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_RULER +
-            "-innermost"
+      astrology.ID_CHART +
+        "-" +
+        astrology.ID_RADIX +
+        "-" +
+        astrology.ID_RULER +
+        "-innermost"
     );
 
     var startRadius =
@@ -3268,13 +3232,7 @@
     var universe = this.universe;
     var wrapper = astrology.utils.getEmptyWrapper(
       universe,
-      this.isStatic
-        ? astrology.ID_CHART_STATIC
-        : astrology.ID_CHART +
-            "-" +
-            astrology.ID_RADIX +
-            "-" +
-            astrology.ID_CIRCLES
+      astrology.ID_CHART + "-" + astrology.ID_RADIX + "-" + astrology.ID_CIRCLES
     );
 
     var circle;
